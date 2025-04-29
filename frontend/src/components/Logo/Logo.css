@@ -1,0 +1,9 @@
+.introduction{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.introduction h1{
+    font-size: 40px;
+}
