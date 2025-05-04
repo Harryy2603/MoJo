@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './App.css'
 import Home from './Pages/Home/Home'
 import LogMood from './Pages/LogMood/LogMood';
-import OnBoarding from './Pages/Onboarding/onBoarding'
 import PersonalizedSuggestions from './Pages/PersonalizedSuggestions/PersonalizedSuggestions';
 import ScrollTop from './components/ScrollToTop/ScrollTop'
 import LoginPopUp from './components/LoginPopUp/LoginPopUp';
@@ -21,8 +20,7 @@ function App() {
       <div className="app">
         <Navbar setShowLogin = {setShowLogin}/>
         <Routes>
-          <Route path="/" element={<OnBoarding />} />
-          <Route path="/home" element={<Home setShowLogin={setShowLogin} />} />
+          <Route path="/" element={<Home setShowLogin={setShowLogin} />} />
           <Route path="/logMood" element={<LogMood />} />
           <Route path="/personalizedSuggestions" element={<PersonalizedSuggestions />}/>
         </Routes>

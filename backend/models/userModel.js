@@ -8,7 +8,7 @@ const moodLogSchema = new mongoose.Schema({
 })
 
 const answersSchema = new mongoose.Schema({
-    date: { type: String }, // Same date as mood log
+    date: { type: String },
     answers: {
         type: Array,
         default: []
