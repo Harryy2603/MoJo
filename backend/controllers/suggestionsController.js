@@ -71,8 +71,10 @@ const suggestionMap = {
 export const getSuggestion = async (req, res) => {
   try {
     const { emoji, sleepQuality, metFriends, productivity, tookBreaks, overallFeeling, notes } = req.body;
+    
+    const ML_URL = process.env.ML_SERVICE_URL || 'http://localhost:8000';
 
-    const response = await axios.post('http://localhost:5000/predict', {
+    const response = await axios.post(`${ML_URL}/predict`, {
       emoji,
       sleepQuality,
       metFriends,
