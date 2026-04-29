@@ -26,7 +26,7 @@ const PersonalizedSuggestions = () => {
           Authorization: `Bearer ${token}`,
         };
 
-        const moodResponse = await fetch(`http://localhost:4000/api/mood/today/${userId}`, {
+        const moodResponse = await fetch(`https://mojo-backend-services.onrender.com/api/mood/today/${userId}`, {
           method: "GET",
           headers,
         });
@@ -34,7 +34,7 @@ const PersonalizedSuggestions = () => {
         if (!moodResponse.ok) throw new Error(moodResult.message || "Failed to fetch mood data");
         setMoodData(moodResult ? [moodResult] : []);
 
-        const answersResponse = await fetch(`http://localhost:4000/api/mood/get-answers/${userId}`, {
+        const answersResponse = await fetch(`https://mojo-backend-services.onrender.com/api/mood/get-answers/${userId}`, {
           method: "GET",
           headers,
         });
@@ -83,7 +83,7 @@ const PersonalizedSuggestions = () => {
     
     console.log("📦 Payload sent to suggestions API:", payload);
 
-    const response = await fetch(`http://localhost:4000/api/suggestions`, {
+    const response = await fetch(`https://mojo-backend-services.onrender.com/api/suggestions`, {
       method: "POST",
       headers,
       body: JSON.stringify(payload),
