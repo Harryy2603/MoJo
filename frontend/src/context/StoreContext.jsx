@@ -5,7 +5,7 @@ export const StoreContext  = createContext(null)
 
 const StoreContextProvider = (props) =>{
 
-    const url = "http://localhost:4000"
+    const url = "https://mojo-backend-services.onrender.com"
     const [token,setToken] = useState("");
     const [name, setName] = useState("");
 
