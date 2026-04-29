@@ -62,7 +62,7 @@ const LogCard = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/mood/log",
+        "https://mojo-backend-services.onrender.com/api/mood/log",
         { moodData },
         {
           headers: {

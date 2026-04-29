@@ -60,7 +60,7 @@ const Questions = ({ userId }) => {
     // console.log("UserId from LocalStorage:", userId);
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/questions/save-answers",
+        "https://mojo-backend-services.onrender.com/api/questions/save-answers",
         {
           userId,
           answers: responses,
